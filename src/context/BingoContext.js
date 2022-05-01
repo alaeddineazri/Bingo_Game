@@ -50,6 +50,7 @@ export const BingoProvider = ({ children }) => {
     setArray([12]);
     setWasClicked("");
     setBingo(0);
+    setName("");
   };
 
 
