@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import cardContent from "../data/cardContent";
 import { shuffle } from "lodash";
 import winCombination from "../data/winCombination";
+import { toast } from "react-toastify";
 
 const BingoContext = createContext();
 
@@ -38,7 +39,17 @@ export const BingoProvider = ({ children }) => {
     setBingo(arrayOfTrue.length);
 
     if (bingo < arrayOfTrue.length) {
-      console.log("you win");
+        const notify = () =>
+        toast("✨✨✨✨✨BINGO ✨✨✨✨", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      notify();
     }
   }, [array, bingo]);
 
