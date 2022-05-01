@@ -1,12 +1,14 @@
 import { createContext, useState } from "react";
 import cardContent from "../data/cardContent";
+import { shuffle } from "lodash";
 
 
 const BingoContext = createContext();
 
 export const BingoProvider = ({ children }) => {
 
-    const [content, setContent] = useState([...cardContent]);
+    const [content, setContent] = useState(shuffle([...cardContent]));
+
 
 
 
