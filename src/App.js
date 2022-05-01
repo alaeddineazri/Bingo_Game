@@ -12,7 +12,14 @@ function App() {
       <CardContainer />
       <ControlBoard />
       <Scoreboard />
-      <ToastContainer/>
+      <ToastContainer
+      position="top-center"
+      autoClose={5000}
+      closeOnClick
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      />
     </BingoProvider>
   );
 }
