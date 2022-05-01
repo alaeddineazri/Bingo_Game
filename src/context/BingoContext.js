@@ -12,6 +12,10 @@ export const BingoProvider = ({ children }) => {
   const [array, setArray] = useState([12]);
   const [wasClicked, setWasClicked] = useState("");
   const [bingo, setBingo] = useState(0);
+  const [name, setName] = useState("");
+  const [rank, setRank] = useState([]);
+
+
 
 
   const handleClick = (index) => {
@@ -25,10 +29,6 @@ export const BingoProvider = ({ children }) => {
       setArray([...array]);
     }
   };
-  // console.log("index",index)
-  // console.log("array",array)
-  // console.log("wasClicked",wasClicked)
-    // console.log("bingo",bingo)
 
   useEffect(() => {
     let bingos = winCombination.map((elm) =>
@@ -42,12 +42,55 @@ export const BingoProvider = ({ children }) => {
     }
   }, [array, bingo]);
 
+
+
+
+  const reset = () => {
+    setIndex();
+    setArray([12]);
+    setWasClicked("");
+    setBingo(0);
+  };
+
+
+
+  const handelChange = (e) => {
+    setName(e.target.value);
+  };
+
+
+
+  const nextPlayer = () => {
+    let player = { name: name, score: bingo };
+    setRank([...rank, player]);
+
+    reset();
+  };
+
+
+
+  // console.log("index",index)
+  // console.log("array",array)
+  // console.log("wasClicked",wasClicked)
+  // console.log("bingo",bingo)
+  // console.log("name",name)
+  // console.log("rank",rank)
+
+
+
+
   return (
     <BingoContext.Provider
       value={{
         content,
         handleClick,
+        handelChange,
+        nextPlayer,
         array,
+        reset,
+        rank,
+        bingo,
+        name,
       }}
     >
       {children}
