@@ -1,12 +1,12 @@
-
+import "./App.css";
+import { BingoProvider } from "./context/BingoContext";
+import CardContainer from "./components/CardContainer";
 
 function App() {
   return (
-    <div className="App">
-      <h1>
-        Hello, world!
-      </h1>
-    </div>
+    <BingoProvider>
+      <CardContainer />
+    </BingoProvider>
   );
 }
 
