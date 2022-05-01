@@ -10,10 +10,16 @@ const CardContainer = () => {
 
 
   return (
-    <div className='cardContainer'>
-        {content.map(el=><Card  />)}
-    </div>
+    <div className="cardContainer">
+    {content.map((element, index) =>
+      index === 12 ? (
+        <Card key={index} element={"FREE"} />
+      ) : (
+        <Card key={index} element={element} />
+      )
+    )}
+  </div>
   )
 }
 
-export default CardContainer 
+export default CardContainer;
