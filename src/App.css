@@ -25,3 +25,22 @@
   justify-content: center;
   align-items: center;
 } 
+
+
+
+
+.wasClicked{
+  background-color: rgb(255, 3, 3);
+} 
+
+
+.center {
+  background-color: rgb(17, 0, 255);
+  width: 19%;
+  height: 19%;
+  border: 2px solid #000000;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
