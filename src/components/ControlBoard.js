@@ -7,7 +7,7 @@ const ControlBoard = () => {
 
   return (
     <div className='ControlBoard'>
-        <h1>ControlBoard</h1>
+        <h3>ControlBoard</h3>
         <div className='ControlBoard-btn' >
         <button   onClick={()=>reset()}>reset</button>
         <input type="text" placeholder='Put the player name ' value={name} onChange={handelChange} />

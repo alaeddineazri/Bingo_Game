@@ -18,7 +18,7 @@ const Scoreboard = () => {
         {
             rank.sort((a, b) => (a.score < b.score) ? 1 : -1)
             .map((el,index)=>{
-              return <RankInfo key={index} el={el}/>
+              return <RankInfo key={index} index={index} el={el}/>
             })
           }
       </div>

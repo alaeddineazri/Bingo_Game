@@ -8,8 +8,19 @@ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
+
+    <>
+    <div className="navbar">BINGO GAME </div>
+    
+    <div className="App">
+
+    
     <BingoProvider>
-      <CardContainer />
+      
+      <div className="left-box" >
+        <CardContainer />
+      </div>
+      <div className="right-box">      
       <ControlBoard />
       <Scoreboard />
       <ToastContainer
@@ -20,7 +31,11 @@ function App() {
       draggable
       pauseOnHover
       />
+      </div>
     </BingoProvider>
+
+    </div>
+    </>
   );
 }
 

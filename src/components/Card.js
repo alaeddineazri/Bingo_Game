@@ -6,7 +6,7 @@ const Card = ({ element, index, center }) => {
 
 
   return (
-    <div
+    <div 
       onClick={() => handleClick(index)}
       className={` ${array.includes(index) ? "wasClicked" : ""}  ${center ? "center" : "card"}`}
     >
